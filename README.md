@@ -1,97 +1,167 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# ✨ Eboné Essence
 
-# Getting Started
+🚀 **Eboné Essence** is a premium **dating & social networking app** designed for Black singles to connect, engage, and find love. It blends **matchmaking, real-time messaging, and social interactions** with exclusive VIP features.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 📌 Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+✅ **Swipe-Based Matchmaking** – Like or pass profiles to find the best matches.  
+✅ **Real-Time Messaging** – Chat with matches instantly (VIP users get extra perks).  
+✅ **Social Feed** – Post updates, like, and comment just like a social network.  
+✅ **VIP Virtual Events** – Speed dating, mixers, and more exclusive experiences.  
+✅ **Secure & Verified Community** – AI moderation, profile verification, and encrypted chats.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
+## 🛠️ Tech Stack
+
+### **Frontend (Mobile App)**
+
+- **React Native** – Cross-platform mobile development.
+- **Tailwind CSS** – Custom styling for sleek UI.
+- **Redux Toolkit** – State management.
+
+### **Backend & Cloud Services**
+
+- **Node.js & Express** – API and matchmaking logic.
+- **AWS Lambda & API Gateway** – Serverless backend.
+- **Amazon DynamoDB** – NoSQL database.
+- **AWS S3** – Profile photos & media storage.
+- **AWS Cognito** – Authentication & user management.
+
+---
+
+## 🚀 Getting Started
+
+### **1️⃣ Clone the Repository**
+
+```bash
+git clone https://github.com/YOUR-USERNAME/EboneEssence.git
+cd EboneEssence
+```
+
+### **2️⃣ Install Dependencies**
+
+```bash
+# Frontend
+cd frontend
+npm install
+
+# Backend
+cd backend
+npm install
+```
+
+### **3️⃣ Run the App**
+
+```bash
+# Start the backend (Express API)
+cd backend
 npm start
 
-# OR using Yarn
-yarn start
+# Start the React Native app
+cd frontend
+npm start
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🔍 Project Structure
 
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```
+EboneEssence/
+│── .github/                  # GitHub workflows (CI/CD, Actions)
+│── frontend/                 # React Native app (mobile)
+│   ├── src/                  # Main source code
+│   │   ├── components/       # Reusable UI components
+│   │   ├── screens/          # Screen layouts (Home, Profile, Matches)
+│   │   ├── navigation/       # React Navigation setup
+│   │   ├── redux/            # Redux state management
+│   │   ├── assets/           # Images, icons, fonts
+│   │   ├── utils/            # Helper functions
+│   ├── .env                  # Environment variables (never commit this)
+│   ├── package.json          # Dependencies & scripts
+│   ├── index.js              # Entry point
+│
+│── backend/                  # Node.js + Express API
+│   ├── src/
+│   │   ├── controllers/      # Business logic
+│   │   ├── models/           # Database models
+│   │   ├── routes/           # API endpoints
+│   │   ├── middleware/       # Authentication & security
+│   │   ├── utils/            # Helper functions
+│   ├── .env                  # Backend environment variables
+│   ├── server.js             # Express server entry
+│   ├── package.json          # Backend dependencies
+│
+│── docs/                     # Documentation
+│   ├── PRD.md                # Product Requirement Document
+│   ├── README.md             # Project Overview
+│   ├── API_REFERENCE.md      # API Documentation
+│
+│── tests/                    # Automated tests
+│   ├── frontend/             # UI tests (Jest, Detox)
+│   ├── backend/              # API tests (Jest, Supertest)
+│
+│── .gitignore                # Ignore unnecessary files
+│── LICENSE                   # Proprietary License
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## ✅ Contributing
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+We welcome contributions! **If you’d like to contribute:**
 
-```sh
-bundle install
+1. Fork the repository.
+2. Create a feature branch (`feature/new-feature`).
+3. Submit a pull request.
+
+---
+
+## 🔒 Security & Privacy
+
+- **End-to-End Encryption** – Ensures secure messaging.
+- **AWS WAF & API Gateway** – Protects against cyber threats.
+- **User Report System** – Allows users to report fake profiles & inappropriate behavior.
+
+---
+
+## 📅 Roadmap
+
+🚀 **Phase 1** – MVP Development (In Progress)  
+🚀 **Phase 2** – Beta Testing & User Feedback  
+🚀 **Phase 3** – Launch in Select Cities
+
+---
+
+## 📬 Contact
+
+📩 **Email:** support@eboneessence.com  
+🌐 **Website:** [www.eboneessence.com](https://www.eboneessence.com)  
+📱 **Follow Us on Social Media**
+
+---
+
+## 📜 License
+
+```
+Eboné Essence - Proprietary License
+
+Copyright (c) 2024 Eboné Essence
+
+All rights reserved.
+
+This software and its source code are proprietary to Eboné Essence and are not to be copied, distributed, modified, or shared without express permission from the copyright holder.
+
+Unauthorized use, reproduction, or distribution of this software, in whole or in part, is strictly prohibited.
+
+For licensing inquiries, please contact: legal@eboneessence.com
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
-```
+### 🎉 **Eboné Essence – More Than Just Dating, It’s a Movement.**
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+💙 **#BlackLove #BlackConnections #EboneEssence**
