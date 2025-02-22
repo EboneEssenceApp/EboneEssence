@@ -72,25 +72,46 @@ npm start
 ```
 EboneEssence/
 │── .github/                  # GitHub workflows (CI/CD, Actions)
+│   ├── workflows/            # GitHub Actions workflow files
+│   │   ├── ci.yml            # CI/CD pipeline (build, lint, test)
+│   │   ├── deploy.yml        # Deployment automation
+│   ├── ISSUE_TEMPLATE.md     # Issue template (optional)
+│   ├── PULL_REQUEST_TEMPLATE.md  # PR template (optional)
+│
 │── frontend/                 # React Native app (mobile)
 │   ├── src/                  # Main source code
 │   │   ├── components/       # Reusable UI components
 │   │   ├── screens/          # Screen layouts (Home, Profile, Matches)
 │   │   ├── navigation/       # React Navigation setup
 │   │   ├── redux/            # Redux state management
+│   │   ├── services/         # API requests (Axios, GraphQL, etc.)
+│   │   │   ├── authService.ts  # Handles authentication requests
+│   │   │   ├── userService.ts  # Fetches user-related data
+│   │   │   ├── apiClient.ts    # Configures Axios instance
 │   │   ├── assets/           # Images, icons, fonts
 │   │   ├── utils/            # Helper functions
+│   │   ├── config/           # Configuration files
+│   │   │   ├── theme.ts      # Theme and styling settings
+│   │   │   ├── constants.ts  # Common app constants
 │   ├── .env                  # Environment variables (never commit this)
 │   ├── package.json          # Dependencies & scripts
 │   ├── index.js              # Entry point
+│   ├── App.tsx               # Main application file
 │
 │── backend/                  # Node.js + Express API
 │   ├── src/
 │   │   ├── controllers/      # Business logic
-│   │   ├── models/           # Database models
+│   │   ├── models/           # Database models (MongoDB/DynamoDB)
 │   │   ├── routes/           # API endpoints
-│   │   ├── middleware/       # Authentication & security
-│   │   ├── utils/            # Helper functions
+│   │   ├── middleware/       # Authentication & security (JWT, rate-limiting)
+│   │   ├── services/         # Services for database queries, 3rd party APIs
+│   │   │   ├── authService.ts  # Handles authentication
+│   │   │   ├── userService.ts  # Fetches user data
+│   │   ├── utils/            # Utility functions (logging, error handling)
+│   │   ├── config/           # Configuration settings
+│   │   │   ├── db.ts         # Database connection logic
+│   │   │   ├── auth.ts       # JWT & authentication settings
+│   │   │   ├── constants.ts  # App-wide constants
 │   ├── .env                  # Backend environment variables
 │   ├── server.js             # Express server entry
 │   ├── package.json          # Backend dependencies
@@ -99,10 +120,12 @@ EboneEssence/
 │   ├── PRD.md                # Product Requirement Document
 │   ├── README.md             # Project Overview
 │   ├── API_REFERENCE.md      # API Documentation
+│   ├── CONTRIBUTING.md       # Guide for contributors (new addition)
 │
 │── tests/                    # Automated tests
 │   ├── frontend/             # UI tests (Jest, Detox)
 │   ├── backend/              # API tests (Jest, Supertest)
+│   ├── e2e/                  # End-to-end tests (Cypress or Detox)
 │
 │── .gitignore                # Ignore unnecessary files
 │── LICENSE                   # Proprietary License
