@@ -59,7 +59,7 @@ const NavIcon = ({
 
   return (
     <View style={styles.navIcon}>
-      <IconComponent name={name} size={24} color="#FFB74D" />
+      <IconComponent name={name} size={28} color="#FFB74D" />
     </View>
   );
 };

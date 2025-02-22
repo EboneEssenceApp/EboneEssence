@@ -70,7 +70,7 @@ export const styles = StyleSheet.create({
     marginTop: 'auto',
   },
   navIcon: {
-    padding: 12,
+    padding: 10,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     borderRadius: 15,
     width: 48,
