@@ -51,14 +51,22 @@ export const styles = StyleSheet.create({
   },
   appName: {
     fontSize: 48,
-    color: 'white',
     fontFamily: 'MarcellusSC-Regular',
     textAlign: 'center',
+    color: 'white',
     marginBottom: 16,
     letterSpacing: 1,
-    textShadowColor: 'rgba(0, 0, 0, 0.3)',
+    fontWeight: '700',
+    textShadowColor: 'rgba(0, 0, 0, 0.4)',
     textShadowOffset: {width: 0, height: 2},
     textShadowRadius: 4,
+  },
+  appNameGradient: {
+    height: 70, // Increased to accommodate larger font
+    marginBottom: 16,
+  },
+  appNameGradientText: {
+    opacity: 0,
   },
   tagline: {
     fontSize: 24,

@@ -8,14 +8,7 @@ import {
   Image,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-// import Icon from 'react-native-vector-icons/MaterialIcons';
 import {styles} from './WelcomeScreen.styles';
-
-// const OutlinedHeart = () => (
-//   <View style={styles.outlinedHeart}>
-//     <Icon name="favorite-border" size={20} color="#FFB74D" />
-//   </View>
-// );
 
 const WelcomeScreen = () => {
   return (
