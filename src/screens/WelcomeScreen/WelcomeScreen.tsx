@@ -5,53 +5,59 @@ import {
   TouchableOpacity,
   SafeAreaView,
   StatusBar,
+  Image,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+// import Icon from 'react-native-vector-icons/MaterialIcons';
 import {styles} from './WelcomeScreen.styles';
 
-const OutlinedHeart = () => (
-  <View style={styles.outlinedHeart}>
-    <Icon name="favorite-border" size={20} color="#FFB74D" />
-  </View>
-);
+// const OutlinedHeart = () => (
+//   <View style={styles.outlinedHeart}>
+//     <Icon name="favorite-border" size={20} color="#FFB74D" />
+//   </View>
+// );
 
 const WelcomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
 
-      {/* Top Icons */}
-      <View style={styles.header}>
-        <Icon name="radio-button-unchecked" size={24} color="#FFB74D" />
-        <Icon name="access-time" size={24} color="#FFB74D" />
-      </View>
-
-      {/* Main Content */}
       <LinearGradient
-        colors={['rgba(156, 39, 176, 0.3)', 'transparent']}
+        colors={['#2D0845', '#8B4513']} // Dark purple to deep gold
         style={styles.gradient}>
         <View style={styles.content}>
-          {/* Top Hearts */}
-          <View style={styles.heartsRow}>
-            <OutlinedHeart />
-            <OutlinedHeart />
+          {/* Logo/Brand Image */}
+          <View style={styles.logoContainer}>
+            <Image
+              source={require('../../assets/images/brand-glow.png')}
+              style={styles.logoImage}
+            />
           </View>
 
-          {/* Center Heart */}
-          <View style={styles.centerHeart}>
-            <Icon name="favorite" size={30} color="#FFB74D" />
-          </View>
+          {/* App Name */}
+          <Text style={styles.appName}>Eboné Essencé</Text>
 
-          {/* Title and Subtitle */}
-          <Text style={styles.title}>Eboné Essencé</Text>
+          {/* Tagline */}
+          <Text style={styles.tagline}>
+            Connect. Engage. Find Your Essence.
+          </Text>
+
+          {/* Subtitle */}
           <Text style={styles.subtitle}>
-            The elegant app for enhancing your daily love and romance experience
+            A premium space for meaningful connections—whether for love or
+            community.
           </Text>
 
           {/* Get Started Button */}
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>GET STARTED</Text>
+          <TouchableOpacity style={styles.primaryButton}>
+            <Text style={styles.primaryButtonText}>GET STARTED</Text>
+          </TouchableOpacity>
+
+          {/* Login Link */}
+          <TouchableOpacity style={styles.loginContainer}>
+            <Text style={styles.loginText}>
+              Already have an account? Log In
+            </Text>
           </TouchableOpacity>
         </View>
       </LinearGradient>
