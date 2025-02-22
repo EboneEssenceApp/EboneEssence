@@ -31,9 +31,7 @@ const WelcomeScreen = () => {
           <Text style={styles.appName}>Eboné Essencé</Text>
 
           {/* Tagline */}
-          <Text style={styles.tagline}>
-            Connect. Engage. Find Your Essence.
-          </Text>
+          <Text style={styles.tagline}>Vibe. Love. Thrive.</Text>
 
           {/* Subtitle */}
           <Text style={styles.subtitle}>

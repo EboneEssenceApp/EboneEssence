@@ -60,6 +60,7 @@ export const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.4)',
     textShadowOffset: {width: 0, height: 2},
     textShadowRadius: 4,
+    fontVariant: ['small-caps'],
   },
   appNameGradient: {
     height: 70, // Increased to accommodate larger font
