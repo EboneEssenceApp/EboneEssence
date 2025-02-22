@@ -6,16 +6,10 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
+import WelcomeScreen from './src/screens/WelcomeScreen/WelcomeScreen';
 
-import {styles} from './App.styles';
-
-function App(): React.JSX.Element {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Ebone Essence</Text>
-    </View>
-  );
-}
+const App = () => {
+  return <WelcomeScreen />;
+};
 
 export default App;

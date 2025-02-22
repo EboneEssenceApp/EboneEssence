@@ -105,6 +105,22 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    packagingOptions {
+        pickFirst 'fonts/MaterialIcons.ttf'
+        pickFirst 'lib/x86/libjsc.so'
+        pickFirst 'lib/x86_64/libjsc.so'
+        pickFirst 'lib/arm64-v8a/libjsc.so'
+        pickFirst 'lib/armeabi-v7a/libjsc.so'
+        pickFirst '**/libjsc.so'
+        
+        // Add these lines to handle duplicate font files
+        pickFirst '**/fonts/Entypo.ttf'
+        pickFirst '**/fonts/FontAwesome.ttf'
+        pickFirst '**/fonts/FontAwesome6.ttf'
+        pickFirst '**/fonts/Ionicons.ttf'
+        pickFirst '**/fonts/MaterialCommunityIcons.ttf'
+        pickFirst '**/fonts/MaterialIcons.ttf'
+    }
 }
 
 dependencies {
@@ -117,3 +133,9 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'FontAwesome6.ttf', 'MaterialCommunityIcons.ttf', 'FontAwesome.ttf', 'Entypo.ttf', 'Ionicons.ttf' ]
+]
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
