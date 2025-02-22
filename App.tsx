@@ -6,10 +6,15 @@
  */
 
 import React from 'react';
-import WelcomeScreen from './src/screens/WelcomeScreen/WelcomeScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import BottomTabNavigator from './src/navigation/BottomTabNavigation/BottomTabNavigator.tsx';
 
 const App = () => {
-  return <WelcomeScreen />;
+  return (
+    <NavigationContainer>
+      <BottomTabNavigator />
+    </NavigationContainer>
+  );
 };
 
 export default App;
