@@ -10,8 +10,14 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {styles} from './WelcomeScreen.styles';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../navigation/types';
 
-const WelcomeScreen = () => {
+type Props = {
+  navigation: NativeStackNavigationProp<RootStackParamList, 'Welcome'>;
+};
+
+const WelcomeScreen = ({navigation}: Props) => {
   const [isLoginPressed, setIsLoginPressed] = useState(false);
 
   return (
@@ -46,7 +52,11 @@ const WelcomeScreen = () => {
           thriving community.
         </Text>
 
-        <TouchableOpacity style={styles.getStartedButton}>
+        <TouchableOpacity
+          style={styles.getStartedButton}
+          onPress={() =>
+            navigation.navigate('LoginRegister', {initialMode: 'register'})
+          }>
           <Text style={styles.getStartedText}>GET STARTED</Text>
         </TouchableOpacity>
 
@@ -54,7 +64,10 @@ const WelcomeScreen = () => {
           <Text style={styles.loginText}>Already have an account? </Text>
           <Pressable
             onPressIn={() => setIsLoginPressed(true)}
-            onPressOut={() => setIsLoginPressed(false)}>
+            onPressOut={() => setIsLoginPressed(false)}
+            onPress={() =>
+              navigation.navigate('LoginRegister', {initialMode: 'login'})
+            }>
             <Text
               style={[
                 styles.loginHighlight,
