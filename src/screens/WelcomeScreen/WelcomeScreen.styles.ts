@@ -9,6 +9,9 @@ export const styles = StyleSheet.create({
   },
   gradient: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 24,
   },
   content: {
     flex: 1,
@@ -17,50 +20,35 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   logoContainer: {
-    width: width * 0.7,
-    height: width * 0.7,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 32,
-    borderRadius: width * 0.35,
-    // Enhanced shadow configuration
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 8,
-    },
-    shadowOpacity: 0.6,
-    shadowRadius: 16,
-    elevation: 20,
+    width: width * 0.6,
+    height: width * 0.6,
+    marginTop: 20,
+    marginBottom: 25,
+    // borderRadius: width * 0.3,
+    // borderWidth: 2,
+    // borderColor: '#FFD700',
+    overflow: 'hidden',
+  },
+  titleImage: {
+    width: width * 0.8, // Adjust width as needed
+    height: 60, // Adjust height as needed
+    resizeMode: 'contain',
+    marginBottom: 12,
   },
   logoImage: {
     width: '100%',
     height: '100%',
     resizeMode: 'cover',
-    borderRadius: width * 0.35,
-    borderWidth: 2,
-    borderColor: 'rgba(255, 255, 255, 0.3)',
-    // Additional inner glow effect
-    shadowColor: '#fff',
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
   },
   appName: {
-    fontSize: 48,
+    fontSize: 40,
     fontFamily: 'MarcellusSC-Regular',
+    color: '#FFD700',
     textAlign: 'center',
-    color: 'white',
-    marginBottom: 16,
-    letterSpacing: 1,
-    fontWeight: '700',
-    textShadowColor: 'rgba(0, 0, 0, 0.4)',
+    marginBottom: 8,
+    textShadowColor: 'rgba(255, 215, 0, 0.3)',
     textShadowOffset: {width: 0, height: 2},
     textShadowRadius: 4,
-    fontVariant: ['small-caps'],
   },
   appNameGradient: {
     height: 70, // Increased to accommodate larger font
@@ -75,7 +63,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Marcellus-Regular',
     textAlign: 'center',
     marginBottom: 16,
-    fontWeight: '500',
+    marginTop: 20,
   },
   subtitle: {
     fontSize: 16,
@@ -83,26 +71,56 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 48,
     lineHeight: 24,
+    paddingHorizontal: 20,
+    marginTop: 16,
   },
-  primaryButton: {
-    backgroundColor: '#9C27B0', // Purple
+  getStartedButton: {
+    backgroundColor: '#9C27B0',
     paddingHorizontal: 48,
     paddingVertical: 16,
     borderRadius: 30,
     width: '100%',
     alignItems: 'center',
-    marginBottom: 16,
+    marginBottom: 24,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+    borderWidth: 2,
+    borderColor: '#D4A857',
   },
-  primaryButtonText: {
+  getStartedText: {
     color: 'white',
-    fontSize: 18,
-    fontWeight: 'bold',
+    fontSize: 20,
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
   },
   loginContainer: {
-    marginTop: 16,
+    marginTop: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   loginText: {
     color: 'rgba(255, 255, 255, 0.9)',
     fontSize: 16,
+    textAlign: 'center',
+  },
+  loginHighlight: {
+    color: '#FFD966',
+  },
+  loginHighlightPressed: {
+    textDecorationLine: 'underline',
+    textDecorationColor: '#FFD966',
+  },
+  decorativeIcon: {
+    width: 50,
+    height: 50,
+    marginTop: 50,
   },
 });
